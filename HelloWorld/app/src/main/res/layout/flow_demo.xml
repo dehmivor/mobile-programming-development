@@ -3,17 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:flow_wrapMode="chain">
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:orientation="vertical"
         app:constraint_referenced_ids="button3,button4,button5,button6,button7,button,button2"
+        app:flow_horizontalAlign="start"
+        app:flow_verticalGap="15dp"
+        app:flow_wrapMode="chain2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_wrapBehaviorInParent="horizontal_only" />
 
     <Button
         android:id="@+id/button3"
