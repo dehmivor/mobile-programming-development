@@ -25,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tv_price = findViewById(R.id.tv_price);
         tv_price.setTextColor(Color.BLUE);
+        tv_price.setTextColor(getColor(R.color.yellow));
+        tv_price.setText(R.string.gi_250000);
     }
 }
