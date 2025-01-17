@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.exercise2);
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
 
-        TextView tv_price = findViewById(R.id.tv_price);
-        tv_price.setTextColor(Color.BLUE);
-        tv_price.setTextColor(getColor(R.color.yellow));
-        tv_price.setText(R.string.gi_250000);
+//        TextView tv_price = findViewById(R.id.tv_price);
+//        tv_price.setTextColor(Color.BLUE);
+//        tv_price.setTextColor(getColor(R.color.yellow));
+//        tv_price.setText(R.string.gi_250000);
     }
 }

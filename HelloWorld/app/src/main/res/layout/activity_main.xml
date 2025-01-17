@@ -94,9 +94,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_marginTop="32dp"
-            android:text="Price: 1000$"
+            android:text="TextView"
+            android:textColor="#ff0000"
+            android:background="@color/gray"
             android:textSize="24sp"
-            android:textStyle="bold"
+            android:textStyle="italic"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
@@ -105,11 +107,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:constraint_referenced_ids="textView5,textView2,textView3,textView4,textView6"
+            app:constraint_referenced_ids="textView5,textView6"
             app:flow_horizontalAlign="start"
             app:flow_verticalGap="20dp"
             tools:layout_editor_absoluteX="233dp"
-            tools:layout_editor_absoluteY="237dp" />
+            tools:layout_editor_absoluteY="237dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="196dp"
+                android:text="Published on: Aug 24th, 2018" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dimension: 1200x1200" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samsung Galaxy Note 9" />
+        </androidx.constraintlayout.helper.widget.Flow>
 
         <TextView
             android:id="@+id/textView5"
@@ -120,34 +143,6 @@
             android:text="Category: Electronic"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/tv_price" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Samsung Galaxy Note 9"
-            tools:layout_editor_absoluteX="209dp"
-            tools:layout_editor_absoluteY="261dp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:text="Dimension: 1200x1200"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:text="Published on: Aug 24th, 2018"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView6"
