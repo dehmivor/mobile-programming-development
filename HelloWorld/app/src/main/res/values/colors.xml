@@ -9,4 +9,5 @@
     <color name="transparent">#00000000</color>
     <color name="yellow">#FFFFFF00</color>
     <color name="orange">#FFFFA500</color>
+    <color name="half_white">#80FFFFFF</color>
 </resources>
