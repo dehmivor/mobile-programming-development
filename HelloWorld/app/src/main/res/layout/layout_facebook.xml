@@ -27,7 +27,6 @@
         android:text="English "
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/textView7"
-        app:layout_constraintTopOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
@@ -39,7 +38,6 @@
         android:text="Change "
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTopOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
