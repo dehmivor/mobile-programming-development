@@ -1,24 +1,42 @@
 package com.example.intent_demo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Lấy tham chiếu đến EditText và Button
+        EditText nameEditText = findViewById(R.id.editTextText);
+        EditText ageEditText = findViewById(R.id.editTextText2);
+        Button button = findViewById(R.id.button);
+
+        // Thiết lập sự kiện onClick cho Button
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lấy dữ liệu từ EditText
+                String name = nameEditText.getText().toString();
+                String ageStr = ageEditText.getText().toString();
+                int age = ageStr.isEmpty() ? 0 : Integer.parseInt(ageStr); // Nếu không nhập tuổi, mặc định là 0
+
+                // Tạo Intent để truyền dữ liệu
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("name", name); // Truyền tên
+                intent.putExtra("age", age);   // Truyền tuổi
+
+                // Bắt đầu MainActivity2
+                startActivity(intent);
+            }
         });
     }
 }
