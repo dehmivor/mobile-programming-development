@@ -1,4 +1,4 @@
-package vn.edu.fpt.fall2022_1;
+package com.example.recyclerdemo;
 
 import android.view.LayoutInflater;
 import android.view.View;

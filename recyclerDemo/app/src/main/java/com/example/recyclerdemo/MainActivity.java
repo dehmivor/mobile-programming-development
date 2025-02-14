@@ -1,4 +1,4 @@
-package vn.edu.fpt.fall2022_1;
+package com.example.recyclerdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         list.add(c2);
         list.add(c3);
         list.add(c4);
+        list.add(c5);
+        list.add(c5);
+        list.add(c5);
+        list.add(c5);
         list.add(c5);
 
         RecyclerView rec = findViewById(R.id.rec_chapters);

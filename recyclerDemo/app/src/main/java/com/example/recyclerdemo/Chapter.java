@@ -1,4 +1,4 @@
-package vn.edu.fpt.fall2022_1;
+package com.example.recyclerdemo;
 
 public class Chapter {
     private String title;
