@@ -1,23 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:fillViewport="true">
 
-    <Button
-        android:id="@+id/cameraButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chụp ảnh"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        android:background="#EEEEEE"/>
+        <!-- Hiển thị ảnh sau khi chụp -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:contentDescription="Ảnh sau khi chụp"/>
 
-</LinearLayout>
+        <!-- Nút chụp ảnh -->
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chụp ảnh"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Nút mở file -->
+        <Button
+            android:id="@+id/openFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mở file"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Hiển thị nội dung file -->
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung file sẽ hiển thị ở đây"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+</ScrollView>
