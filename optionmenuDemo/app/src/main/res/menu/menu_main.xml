@@ -3,37 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menuItem_search"
-        android:icon="@drawable/icon_search"
-        android:title="Search"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="ifRoom|collapseActionView" />
-
-    <item
         android:id="@+id/menuItem_open"
-        android:title="Open"
-        app:showAsAction="never" />
+        android:title="Mở File"
+        android:icon="@drawable/icon_open"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/menuItem_delete"
-        android:title="Delete"
-        app:showAsAction="never" />
+        android:title="Xóa File"
+        android:icon="@drawable/icon_delete"
+        app:showAsAction="always"/>
 
     <item
-        android:title="Share">
-        <menu>
-            <item
-                android:id="@+id/menuItem_facebook"
-                android:title="Facebook" />
-            <item
-                android:id="@+id/menuItem_instagram"
-                android:title="Instagram" />
-        </menu>
-    </item>
+        android:id="@+id/menuItem_share"
+        android:title="Chia sẻ"
+        android:icon="@drawable/icon_share"
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/menuItem_settings"
-        android:title="Settings"
-        app:showAsAction="never" />
+        android:title="Cài đặt"
+        android:icon="@drawable/icon_settings"
+        app:showAsAction="ifRoom"/>
 
+    <item
+        android:id="@+id/menuItem_search"
+        android:title="Tìm kiếm"
+        android:icon="@drawable/icon_search"
+        app:showAsAction="always|collapseActionView"
+        android:actionViewClass="android.widget.SearchView"/>
 </menu>
