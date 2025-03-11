@@ -32,7 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onDownImg(View view) {
-        String imageUrl = "https://i.pinimg.com/736x/94/01/53/9401530c912b0a962398c470ceba542e.jpg";
+        String imageUrl = "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc3Nzk0MS13aWtpbWVkaWEtaW1hZ2Uta293YnN1MHYuanBn.jpg";
 
         // Hiển thị ProgressBar trước khi tải ảnh
         progressBar.setVisibility(View.VISIBLE);
