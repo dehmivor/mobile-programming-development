@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Kiểm tra quyền trước khi gửi thông báo
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-                ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            return; // Không có quyền, không gửi thông báo
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+//                ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+//            return; // Không có quyền, không gửi thông báo
+//        }
 
         // Tạo thông báo
         Notification n = new NotificationCompat.Builder(this, FIRST_CHANNEL)
