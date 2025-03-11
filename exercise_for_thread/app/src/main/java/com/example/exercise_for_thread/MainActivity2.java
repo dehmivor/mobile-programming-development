@@ -6,39 +6,37 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MainActivity extends AppCompatActivity {
-
-    private ImageView imageView;
-    private Button downloadButton;
-    private ProgressBar progressBar;
-    private String imageUrl = "https://r2.erweima.ai/imgcompressed/compressed_3cd28ff945d3870ce452fd77a10fd54c.webp";
-    private Handler handler = new Handler(Looper.getMainLooper());
+public class MainActivity2 extends AppCompatActivity {
+    ImageView imv;
+    ProgressBar progressBar;
+    Handler handler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main2);
 
-        imageView = findViewById(R.id.imageView);
-        downloadButton = findViewById(R.id.downloadButton);
+        imv = findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
-
-        downloadButton.setOnClickListener(v -> downloadImage());
     }
 
-    private void downloadImage() {
+    public void onDownImg(View view) {
+        String imageUrl = "https://i.pinimg.com/736x/94/01/53/9401530c912b0a962398c470ceba542e.jpg";
+
+        // Hiển thị ProgressBar trước khi tải ảnh
         progressBar.setVisibility(View.VISIBLE);
-        downloadButton.setEnabled(false);
+        imv.setVisibility(View.GONE);
 
         new Thread(() -> {
             try {
@@ -49,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 InputStream input = connection.getInputStream();
                 Bitmap bitmap = BitmapFactory.decodeStream(input);
 
+                // Cập nhật UI sau khi tải xong ảnh
                 handler.post(() -> {
-                    imageView.setImageBitmap(bitmap);
                     progressBar.setVisibility(View.GONE);
-                    downloadButton.setEnabled(true);
+                    imv.setVisibility(View.VISIBLE);
+                    imv.setImageBitmap(bitmap);
                 });
             } catch (Exception e) {
                 e.printStackTrace();
