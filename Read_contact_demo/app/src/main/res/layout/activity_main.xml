@@ -8,6 +8,15 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" /> <!-- ⚠️ Sửa height thành 0dp và dùng layout_weight -->
 
+    <TextView
+        android:id="@+id/tvContactDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn một liên hệ để xem chi tiết"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:background="#E0E0E0"/>
 </LinearLayout>
